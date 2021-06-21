@@ -2,7 +2,10 @@
 
 /*LIKE Exercise*/
 SELECT * FROM Customers
-WHERE City LIKE "a%"; /*Contains the letter 'a'*/
+WHERE City LIKE '%a%'; /*Contains the letter 'a'*/
+
+SELECT * FROM Customers
+WHERE City LIKE '%a'; /*ends with the letter "a"*/
 
 SELECT * FROM Customers
 WHERE City = "Berlin";
@@ -25,3 +28,12 @@ VALUES(
 '4306',
 'Norway'
 );
+
+/*MIN/MAX function*/
+SELECT MAX(Price)
+FROM Products;
+
+/*Functions part 2*/
+SELECT COUNT(*)
+FROM Products
+WHERE Price = 18;
