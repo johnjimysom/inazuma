@@ -1,0 +1,2 @@
+# inazuma
+mySQL notes
