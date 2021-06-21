@@ -1,0 +1,6 @@
+/*LIKE Exercise*/
+SELECT * FROM Customers
+WHERE City LIKE "a%"; /*Contains the letter 'a'*/
+
+SELECT * FROM Customer
+WHERE City = "Berlin";
