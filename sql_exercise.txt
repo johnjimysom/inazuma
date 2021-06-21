@@ -1,6 +1,27 @@
+/*! https://www.w3schools.com/sql/exercise.asp  */
+
 /*LIKE Exercise*/
 SELECT * FROM Customers
 WHERE City LIKE "a%"; /*Contains the letter 'a'*/
 
-SELECT * FROM Customer
+SELECT * FROM Customers
 WHERE City = "Berlin";
+
+/*INSERT Exercise*/
+INSERT INTO
+ Customers( 
+CustomerName,
+ContactName,
+Address, 
+City, 
+PostalCode,
+Country
+)
+VALUES(
+'Hekkan Burger',
+'James Suckity',
+'Gateveien 15',
+'Sandnes',
+'4306',
+'Norway'
+);
