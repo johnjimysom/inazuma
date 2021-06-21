@@ -23,6 +23,9 @@ WHERE City LIKE '%a'; /*ends with the letter "a"*/
 SELECT * FROM Customers
 WHERE City = "Berlin";
 
+SELECT * FROM Customers /*records where the value of the City column starts with letter "a" and ends with the letter "b".*/
+WHERE City LIKE 'a%b';
+
 /*INSERT Exercise*/
 INSERT INTO
  Customers( 
