@@ -13,7 +13,7 @@ Shippers	          3
 Suppliers	         29
 */
 
-/*LIKE Exercise*/
+/*------LIKE Exercise-------*/
 SELECT * FROM Customers
 WHERE City LIKE '%a%'; /*Contains the letter 'a'*/
 
@@ -26,7 +26,36 @@ WHERE City = "Berlin";
 SELECT * FROM Customers /*records where the value of the City column starts with letter "a" and ends with the letter "b".*/
 WHERE City LIKE 'a%b';
 
-/*INSERT Exercise*/
+SELECT * FROM Customers /*records where the value of the City column does NOT start with the letter "a".*/
+WHERE City NOT LIKE 'a%';
+
+/*-----Wild Card Exericse------*/
+/*Select all records where the second letter of the City is an "a".*/
+SELECT * FROM Customers
+WHERE City LIKE '_a%';
+
+/*Select all records where the first letter of the City is an "a" or a "c" or an "s".*/
+SELECT * FROM Customers
+WHERE City LIKE '[acs]%';
+
+/*Select all records where the first letter of the City starts with anything from an "a" to an "f".*/
+SELECT * FROM Customers
+WHERE City LIKE '[a-f]%';
+
+/*Select all records where the first letter of the City is NOT an "a" or a "c" or an "f".*/
+SELECT * FROM Customers
+WHERE City LIKE '[!acf]%';
+
+/--------*SQL 'IN'------*/
+/*Use the IN operator to select all the records where Country is either "Norway" or "France".*/
+SELECT * FROM Customers
+WHERE Country IN ('Germany','France');
+
+/*Use the IN operator to select all the records where Country is NOT "Norway" and NOT "France".*/
+SELECT * FROM Customers
+WHERE Country NOT IN ('Norway', 'France');
+
+/*--------INSERT Exercise*----/
 INSERT INTO
  Customers( 
 CustomerName,
