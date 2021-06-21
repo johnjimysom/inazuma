@@ -1,5 +1,18 @@
 /*! https://www.w3schools.com/sql/exercise.asp  */
 
+/*
+Tablename	Records
+===========================
+Customers          92
+Categories	        8
+Employees	         10
+OrderDetails	      518
+Orders	            196
+Products	          77
+Shippers	          3
+Suppliers	         29
+*/
+
 /*LIKE Exercise*/
 SELECT * FROM Customers
 WHERE City LIKE '%a%'; /*Contains the letter 'a'*/
